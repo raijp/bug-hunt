@@ -7,5 +7,9 @@ docker rm -f owasp-zap
 docker run -it -d --user root --mount type=bind,source=$(pwd)/docker/owasp-zap/zap/wrk,target=/zap/wrk/,bind-propagation=shared \
 --name owasp-zap owasp/zap2docker-stable /bin/bash
 
-docker exec -it owasp-zap zap-baseline.py -r report.html -t http://172.41.0.1:8082
+# baseline scan. check out https://www.zaproxy.org/docs/docker/baseline-scan/
+docker exec -it owasp-zap zap-baseline.py -r report.html -t <url>
+
+# full scan. https://www.zaproxy.org/docs/docker/full-scan/
+docker exec -it owasp-zap zap-full-scan.py -r report.html -t <url>
 ```
