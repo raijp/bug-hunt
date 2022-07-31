@@ -50,6 +50,7 @@ docker run -it -d --network network-wpscan --user root --entrypoint /bin/ash \
   --mount type=bind,source=$(pwd)/docker/wpscan/output,target=/output \
   --name wpscan wpscan
 
+
 ####
 # Navigate to http://127.0.0.1:8901 on your using browser then enter username and password
 ####
