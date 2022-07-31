@@ -28,7 +28,7 @@ docker run -it -d --user root --entrypoint /bin/ash \
   --mount type=bind,source=$(pwd)/docker/wpscan/output,target=/output \
   --name wpscan wpscan
 
-docker exec -it wpscan1 /usr/local/bundle/bin/wpscan -o /output/wpscan-output.txt --random-user-agent --url <url>
+docker exec -it wpscan /usr/local/bundle/bin/wpscan -o /output/wpscan-output.txt --random-user-agent --url <url>
 # Check options
-docker exec -it wpscan1 /usr/local/bundle/bin/wpscan --help
+docker exec -it wpscan /usr/local/bundle/bin/wpscan --help
 ```
