@@ -56,7 +56,7 @@ docker run -it -d --network network-wpscan --user root --entrypoint /bin/ash \
 ####
 
 # If you don't need the output, delete -o option.
-docker exec -it wpscan /usr/local/bundle/bin/wpscan --random-user-agent -e vp -e u --url http://172.42.0.1:8901 -o /output/wpscan-output.txt
+docker exec -it wpscan /usr/local/bundle/bin/wpscan --random-user-agent -e vp --url http://172.42.0.1:8901 -o /output/wpscan-output.txt
 # Check options
 docker exec -it wpscan /usr/local/bundle/bin/wpscan --help
 ```
