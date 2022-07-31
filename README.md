@@ -1,4 +1,4 @@
-# bug-hunt
+# Initially, run :
 ```
 git clone https://github.com/raijp/bug-hunt.git && bug-hunt
 ```
@@ -15,7 +15,7 @@ docker run -it -d --user root --mount type=bind,source=$(pwd)/docker/owasp-zap/z
 docker exec -it owasp-zap zap-baseline.py -r report.html -t <url>
 
 # full scan. https://www.zaproxy.org/docs/docker/full-scan/
-docker exec -it owasp-zap zap-full-scan.py -r report.html -t <url>
+docker exec -it owasp-zap zap-full-scan.py -T 10 -r report.html -t <url>
 ```
 
 # WPSCAN
